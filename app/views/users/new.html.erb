@@ -1,0 +1,25 @@
+<h2>User Sign-up</h2>
+
+<%= form_for @user do |s| %>
+    <%= s.label :name %>
+    <%= s.text_field :name %><br>
+
+    <%= s.label :password %>
+    <%= s.password_field :password %><br>
+
+    <%= s.label :nausea %>
+    <%= s.number_field :nausea %><br>
+
+    <%= s.label :happiness %>
+    <%= s.number_field :happiness %><br>
+
+    <%= s.label :tickets %>
+    <%= s.number_field :tickets %><br>
+
+    <%= s.label :height %>
+    <%= s.number_field :height %><br>
+
+    <p>Admin: <%= s.check_box :admin, options = {:class => "user_admin"} %></p><br><br>
+    
+    <%= s.submit %>
+<% end %>
